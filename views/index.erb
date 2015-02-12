@@ -9,10 +9,12 @@
 </head>
 <body>
   <h1>Here are our users!</h1>
+  
   <% @users.each do |user| %>
+  <li><h2><%= "#{user[:first]} #{user[:last]}"%></h2></li>
     <h2><%= user[:name]%></h2><a href="/users/<%= user[:id]%>"> Edit a user</a>
-
   <% end %>
+
   <p>
     <a href="/users/new">Add a user!</a>
   </p>
